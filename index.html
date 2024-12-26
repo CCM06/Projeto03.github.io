@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Frases Aleatórias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        #output {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #555555;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Frases Aleatórias</h1>
+        <div id="output">Clique no botão para gerar uma frase ou piada!</div>
+        <button onclick="generatePhrase()">Gerar Frase</button>
+    </div>
+
+    <script>
+        const phrases = [
+
+            "''Por que o computador foi ao médico?'' Porque ele estava com um vírus!",
+            "A vida é como andar de bicicleta. Para manter o equilíbrio, você precisa se manter em movimento.",
+            "''Por que o livro de matemática ficou triste?'' Porque tinha muitos problemas.",
+            "''O que o zero disse para o oito?'' Que cinto bonito!",
+            "Acredite em si mesmo e em todo o seu potencial.",
+            "Nunca confie em átomos, eles fazem tudo!",
+            "Sorria! É a curva mais bonita do seu corpo.",
+            "Eu só sei que nada sei, mas isso já é um bom começo."
+        ];
+
+        function generatePhrase() {
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            document.getElementById('output').textContent = phrases[randomIndex];
+        }
+    </script>
+</body>
+</html>
